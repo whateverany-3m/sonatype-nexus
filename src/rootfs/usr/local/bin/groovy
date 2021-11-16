@@ -1,0 +1,3 @@
+#!/bin/bash
+exec java -jar "${NEXUS_HOME}/system/org/codehaus/groovy/groovy-all/"*"/groovy-all-"*".jar" "$@"
+

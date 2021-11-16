@@ -1,0 +1,5 @@
+{
+  "name": "nuget",
+  "type": "groovy",
+  "content": "if ( !repository.repositoryManager.exists( 'nuget' ) ){ repository.createNugetProxy('nuget','https://repo.bab.net.au/artifactory/nuget','default',false) }"
+}
