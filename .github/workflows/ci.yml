@@ -1,0 +1,22 @@
+name: ci
+on:  
+  push:
+    tags:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: env_action
+      run: TARGET_VERSION="${GITHUB_REF:10}" TARGET_BUILD="${{ github.run_number }}" TARGET_REGISTRY_TOKEN="${{ secrets.TARGET_REGISTRY_TOKEN }}" TARGET_REGISTRY_USER="${{ github.actor }}" GITHUB_ENV="${GITHUB_ENV}" ./3m-common/scripts/env_action.sh 
+    - name: pre_action
+      run: ./3m-common/scripts/pre_action.sh
+    - name: run_action
+      run: ./3m-common/scripts/run_action.sh
+    - name: post_action
+      run: ./3m-common/scripts/post_action.sh
+
