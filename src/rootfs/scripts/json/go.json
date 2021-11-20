@@ -1,5 +1,0 @@
-{
-  "name": "go",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'go' ) ){ repository.createGolangProxy('go','https://repo.bab.net.au/artifactory/go/','default',false) }"
-}

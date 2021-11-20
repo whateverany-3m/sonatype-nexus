@@ -11,6 +11,7 @@
 .terraformrc
 crash.log
 nexus-data/
+nexus-data/
 override.tf
 override.tf.json
 super-linter.log

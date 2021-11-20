@@ -1,5 +1,0 @@
-{
-  "name": "all",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'all' ) ){ repository.createMavenProxy('all','https://repo.bab.net.au/artifactory/all/') }"
-}

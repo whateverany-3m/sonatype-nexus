@@ -1,5 +1,0 @@
-{
-  "name": "docker",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'docker' ) ){ repository.createDockerProxy('docker','https://docker.repo.bab.net.au/artifactory/docker','REGISTRY',null,null,null,'default',false,false)}"
-}

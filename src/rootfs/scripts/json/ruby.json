@@ -1,5 +1,0 @@
-{
-  "name": "ruby",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'ruby' ) ){ repository.createRubygemsProxy('ruby','https://repo.bab.net.au/artifactory/ruby/','default',false) }"
-}

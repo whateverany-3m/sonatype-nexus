@@ -1,5 +1,0 @@
-{
-  "name": "pypi",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'pypi' ) ){ repository.createPyPiProxy('pypi','https://repo.bab.net.au/artifactory/pypi','default',false)}"
-}

@@ -1,5 +1,0 @@
-{
-  "name": "generic",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'generic' ) ){ repository.createRawProxy('generic','https://repo.bab.net.au/artifactory/generic','default',false) }"
-}

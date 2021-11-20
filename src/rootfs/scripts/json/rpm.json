@@ -1,5 +1,0 @@
-{
-  "name": "rpm",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'rpm' ) ){ repository.createYumProxy('rpm','https://repo.bab.net.au/artifactory/rpm/','default',false) }"
-}

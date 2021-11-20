@@ -1,5 +1,0 @@
-{
-  "name": "npm",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'npm' ) ){ repository.createYumProxy('npm','https://repo.bab.net.au/artifactory/npm') }"
-}

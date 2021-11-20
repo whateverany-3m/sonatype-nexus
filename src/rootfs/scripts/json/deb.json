@@ -1,5 +1,0 @@
-{
-  "name": "deb",
-  "type": "groovy",
-  "content": "if ( !repository.repositoryManager.exists( 'deb' ) ){ repository.createAptProxy('deb','https://repo.bab.net.au/artifactory/deb/','default','deb',false) }"
-}
