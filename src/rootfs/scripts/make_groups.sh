@@ -14,7 +14,7 @@ for GROUP_METHOD in docker:createDockerGroup go:createGolangGroup maven2:createM
       -X 'GET' \
       --header "accept: application/json" \
       "${NEXUS_URL}/service/rest/v1/repositories" | \
-      jq '.[] | select (.format == "'${GROUP}'") | select (.type == "proxy") | .name' | \
+      jq '.[] | select (.format == "'${GROUP}'") | select (.type != "group") | .name' | \
       sed -e ':a' -e '$!N;s/\n/ /;ta' -e "s/\" \"/','/g" -e "s/\"/'/g")
     if [ "${GROUP}" = "docker" ] ; then
       SCRIPT="repository.${METHOD}('${GROUP}',null,null,[${REPOS}])"

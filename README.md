@@ -16,7 +16,7 @@ sudo chown 200 ~/.nexus-data
 Most things tried just work with this:
 `REPO_URL=http://admin:admin123@host.docker.internal:8081/repository`
 
-Note - The first run will run `/scripts/init.sh` which deletes the stock repository, runs scripts to create 
+Note - The first run will run `/scripts/init.sh` which deletes the stock repository, runs scripts to create
        repos in $NEXUS_SCRIPTS and automagically creates repository groups.
 
 ## NEXUS_SCRIPTS
