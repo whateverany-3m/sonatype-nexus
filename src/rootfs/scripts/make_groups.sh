@@ -5,8 +5,7 @@ echo "INFO: BEGIN ${0}"
 SCRIPT_NAME=myscript
 
 
-#for GROUP_METHOD in docker:createDockerGroup go:createGolangGroup maven2:createMavenGroup npm:createNpmGroup nuget:createNugetGroup pypi:createPypiGroup raw:createRawGroup rubygems:createRubygemsGroup yum:createYumGroup ;\
-for GROUP_METHOD in docker:createDockerGroup ;\
+for GROUP_METHOD in docker:createDockerGroup go:createGolangGroup maven2:createMavenGroup npm:createNpmGroup nuget:createNugetGroup pypi:createPypiGroup raw:createRawGroup rubygems:createRubygemsGroup yum:createYumGroup ;\
   do
     GROUP=${GROUP_METHOD/:*}
     METHOD=${GROUP_METHOD#*:}

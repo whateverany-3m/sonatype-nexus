@@ -16,7 +16,7 @@ USER root
 RUN set -x ;\
     echo "INFO: BEGIN run." ;\
     echo "INFO: NEXUS_RPM_REPO=${NEXUS_RPM_REPO}" ;\
-    sed -i -e "#https://cdn-ubi.redhat.com/content/public/ubi/dist#${NEXU_RPM_REPO}#" ;\
+    sed -i -e "#https://cdn-ubi.redhat.com/content/public/ubi/dist#${NEXUS_RPM_REPO}#" ;\
     yum install -y \
       java-1.8.0-openjdk-headless-1:1.8.0.312.b07-2.el8_5.x86_64 \
       jq-1.5-12.el8.x86_64 \

@@ -6,6 +6,7 @@ IFS=# read -ra NEXUS_SCRIPT_ARRAY <<< "${NEXUS_SCRIPTS}"
 
 SCRIPT_NAME=myscript
 
+# shellcheck disable=SC2068 # NEXUS_SCRIPT_ARRAY should be split
 for SCRIPT in ${NEXUS_SCRIPT_ARRAY[@]} ;\
   do
     echo "INFO: delete ${SCRIPT_NAME}"
