@@ -20,6 +20,7 @@ RUN set -x ;\
     yum install -y \
       java-1.8.0-openjdk-headless-1:1.8.0.312.b07-2.el8_5.x86_64 \
       jq-1.5-12.el8.x86_64 \
+      make-4.2.1-10.el8.x86_64 \
      ;\
     update-ca-trust force-enable ;\
     update-ca-trust extract ;\
