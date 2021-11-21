@@ -32,13 +32,15 @@ curl -i -v -u "${NEXUS_USERNAME}:${NEXUS_PASSWORD}" \
   -X DELETE \
   "${NEXUS_URL}/service/rest/v1/script/${SCRIPT_NAME}" || true
 
+# shellcheck disable=SC2086,SC2089 # too hard
 JSON="{
   \"name\": \"${SCRIPT_NAME}\",
   \"type\": \"groovy\",
   \"content\": \"repository.createAptHosted('${APT_NAME}','${APT_NAME}','${GPG_KEY}','${NEXUS_PASSWORD}')\"
 }"
 
-JSON_CLEAN=$(echo ${JSON} | jq -a '.')
+# shellcheck disable=SC2086,SC2090 # too hard
+JSON_CLEAN="$(echo ${JSON} | jq -a '.')"
 
 echo "INFO: create ${SCRIPT_NAME}"
 curl -i -v -u "${NEXUS_USERNAME}:${NEXUS_PASSWORD}" \
