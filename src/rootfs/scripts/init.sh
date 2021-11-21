@@ -48,6 +48,10 @@ for REPO in \
 echo "INFO: run scripts"
 /scripts/run_scripts.sh
 
+echo "INFO: make apt-local"
+/scripts/make_apt-local.sh
+
+
 echo "INFO: make groups"
 /scripts/make_groups.sh
 
